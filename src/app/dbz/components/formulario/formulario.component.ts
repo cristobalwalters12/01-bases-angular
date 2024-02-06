@@ -1,14 +1,8 @@
-import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-formulario',
-  standalone: true,
-  imports: [
-    CommonModule,
-  ],
-  template: `<p>formulario works!</p>`,
+  templateUrl: './formulario.component.html',
   styleUrls: ['./formulario.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FormularioComponent { }
+export class FormularioComponent {}
