@@ -1,16 +1,17 @@
 <div class="col">
   <h4>Agregar</h4>
-  <form action="">
+  <form action="" (ngSubmit)="agregarPersonaje()">
     <div class="form-group">
       <label for="name">Nombre</label>
-      <input type="text" class="form-control" id="name" />
+      <input type="text" class="form-control" name="name" [(ngModel)]="personaje.nombre" />
     </div>
     <div class="form-group">
       <label for="power">Poder</label>
-      <input type="text" class="form-control" id="power" />
+      <input type="text" class="form-control" name="power" [(ngModel)]="personaje.poder" />
     </div>
     <div>
-      <button class="btn btn-primary mt-2">Agregar</button>
+      <button class="btn btn-primary mt-2" >Agregar</button>
     </div>
+    <pre>{{personaje| json}}</pre>
   </form>
 </div>
