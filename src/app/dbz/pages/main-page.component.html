@@ -3,10 +3,13 @@
 
 <div class="row">
   <div class="col">
-    <app-lista [personajes]="DbzService.personajes" DbzService.(onDeletePersonaje)="onDeletePersonaje($event)"></app-lista>
+    <app-lista
+      [personajes]="personajes"
+      (onDeletePersonaje)="eliminarPersonaje($event)"
+    ></app-lista>
   </div>
   <div class="col">
-    <app-formulario (onNewPersonaje)="DbzService.onNewPersonaje($event)"></app-formulario>
+    <app-formulario (onNewPersonaje)="nuevoPersonaje($event)"></app-formulario>
   </div>
 </div>
 <script>
